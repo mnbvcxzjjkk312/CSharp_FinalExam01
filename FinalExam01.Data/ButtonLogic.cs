@@ -6,9 +6,10 @@ namespace FinalExam01.Data
     public class ButtonLogic
     {
         Random rand = new Random();
-        private int _target = 1;
-
+        
+        // 1~9 랜덤 리스트
         public List<int> groupA = new List<int>();
+        // 10~18 랜덤 리스트
         public List<int> groupB = new List<int>();
 
         public void SetList()
@@ -33,15 +34,7 @@ namespace FinalExam01.Data
             }
         }
         
-        //타겟 넘버를 누른게 맞는지
-        //Button.Text의 int 형태와 target을 비교해서 맞으면 true, false
-        public bool IsSame(int number)
-        {
-            if (_target == number)
-                return true;
-
-            return false;
-        }
+        
     }
 
 }

@@ -157,11 +157,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("monofur", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(598, 192);
+            this.label1.Location = new System.Drawing.Point(566, 229);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 60);
+            this.label1.Size = new System.Drawing.Size(0, 60);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // timer
             // 
@@ -171,7 +170,7 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("monofur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button10.Location = new System.Drawing.Point(608, 318);
+            this.button10.Location = new System.Drawing.Point(671, 348);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(182, 60);
             this.button10.TabIndex = 2;
@@ -183,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 532);
+            this.ClientSize = new System.Drawing.Size(1000, 540);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.btnBox);
             this.Controls.Add(this.label1);

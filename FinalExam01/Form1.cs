@@ -16,6 +16,7 @@ namespace FinalExam01
     public partial class Form1 : Form
     {
         private ButtonLogic _bl;
+        private MyTimer stopwatch;
 
         private int _target = 1;
         private int _dummy = 1;
@@ -46,7 +47,7 @@ namespace FinalExam01
 
             if (_target == 19)
             {
-                MyTimer.stopwatch.Stop();
+                stopwatch.Stop();
                 timer.Stop();
             }
         }
@@ -54,6 +55,7 @@ namespace FinalExam01
         private void Form1_Load(object sender, EventArgs e)
         {
             _bl = new ButtonLogic();
+            stopwatch = new MyTimer();
             _bl.SetList();
 
             SetButtonText(_bl.groupA);
@@ -86,7 +88,7 @@ namespace FinalExam01
 
         private void SetTimerText()
         {
-            TimeSpan t = TimeSpan.FromMilliseconds(MyTimer.stopwatch.ElapsedMilliseconds);
+            TimeSpan t = stopwatch.GetTime();
             string answer = string.Format("{0:D2}m:{1:D2}s:{2:D3}ms",
                 t.Minutes,
                 t.Seconds,
@@ -98,7 +100,8 @@ namespace FinalExam01
         private void button10_Click(object sender, EventArgs e)
         {
             timer.Start();
-            MyTimer.stopwatch.Start();
+            stopwatch.Start();
+            button10.Enabled = false;
         }
     }
 }
