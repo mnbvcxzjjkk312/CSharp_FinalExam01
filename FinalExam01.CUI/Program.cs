@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,6 +31,26 @@ namespace FinalExam01.CUI
             {
                 Console.WriteLine(x);
             }
+
+            Stopwatch sw = new Stopwatch();
+            Console.WriteLine("Input Start, start stopwatch");
+            string line = Console.ReadLine();
+            if (line == "Start")
+            {
+                sw.Start();
+            }
+            
+            Console.WriteLine("Input Stop, stop stopwatch");
+            string line2 = Console.ReadLine();
+            if (line2 == "Stop")
+            {
+                if (sw.IsRunning)
+                {
+                    sw.Stop();
+                    Console.WriteLine(sw.Elapsed.ToString());
+                }
+            }
+            
         }
     }
 }

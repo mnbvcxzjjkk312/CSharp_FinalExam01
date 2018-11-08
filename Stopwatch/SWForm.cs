@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalExam01
+namespace Stopwatch
 {
-    public partial class Form1 : Form
+    public class SWForm : Form
     {
-       public Form1()
+        public SWForm()
         {
             InitializeComponent();
-        }     
+        }
+        System.Diagnostics.Stopwatch sw = new St
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
