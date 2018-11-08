@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ButtonLogic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

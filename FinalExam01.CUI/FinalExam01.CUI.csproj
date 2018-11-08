@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinalExam01.Data\FinalExam01.Data.csproj">
+      <Project>{847C31D5-8C58-495A-B879-BA93A204443B}</Project>
+      <Name>FinalExam01.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

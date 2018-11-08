@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalExam01.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,25 +11,10 @@ namespace FinalExam01.CUI
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
-            
-            //int group2 = rand.Next(10, 19);
+            ButtonLogic rb = new ButtonLogic();
+            rb.SetList();
 
-            List<int> a = new List<int>();
-
-            while (a.Count < 9)
-            {
-                int group1 = rand.Next(1, 10);
-
-                if (!a.Contains(group1))
-                    a.Add(group1);
-                
-            }
-
-            foreach (var x in a)
-            {
-                Console.WriteLine(x);
-            }
+            Console.WriteLine(rb.groupA.Count);
         }
     }
 }
