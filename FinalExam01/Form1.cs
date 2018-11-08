@@ -49,8 +49,6 @@ namespace FinalExam01
             _bl = new ButtonLogic();
             _bl.SetList();
 
-            timer.Start();
-
             SetButtonText(_bl.groupA);
         }
 
@@ -74,6 +72,11 @@ namespace FinalExam01
             }
         }
 
+        private void startButton(object sender, EventArgs e)
+        {
+            timer.Start();
 
+
+        }
     }
 }

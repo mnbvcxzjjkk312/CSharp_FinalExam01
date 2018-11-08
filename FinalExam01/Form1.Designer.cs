@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.button10 = new System.Windows.Forms.Button();
             this.btnBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,7 +157,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("monofur", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(595, 221);
+            this.label1.Location = new System.Drawing.Point(598, 192);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 60);
             this.label1.TabIndex = 1;
@@ -166,11 +167,23 @@
             // 
             this.timer.Enabled = true;
             // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("monofur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button10.Location = new System.Drawing.Point(608, 318);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(182, 60);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "&Start";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.startButton);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 532);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.btnBox);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -197,6 +210,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button button10;
     }
 }
 
