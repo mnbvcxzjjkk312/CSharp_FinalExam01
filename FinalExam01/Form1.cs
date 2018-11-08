@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalExam01.Data;
+using Timer = System.Windows.Forms.Timer;
 
 namespace FinalExam01
 {
@@ -42,7 +43,13 @@ namespace FinalExam01
 
                 SetButtonText(_bl.groupB);
             }
-        }       
+
+            if (_target == 19)
+            {
+                MyTimer.stopwatch.Stop();
+                timer.Stop();
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -55,7 +62,7 @@ namespace FinalExam01
         public void SetButtonText(List<int> list)
         {
             List<Button> buttons = new List<Button>();
-            
+
             foreach (Control control in btnBox.Controls)
             {
                 if (control is Button)
@@ -72,11 +79,26 @@ namespace FinalExam01
             }
         }
 
-        private void startButton(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            SetTimerText();
+        }
+
+        private void SetTimerText()
+        {
+            TimeSpan t = TimeSpan.FromMilliseconds(MyTimer.stopwatch.ElapsedMilliseconds);
+            string answer = string.Format("{0:D2}m:{1:D2}s:{2:D3}ms",
+                t.Minutes,
+                t.Seconds,
+                t.Milliseconds);
+
+            label1.Text = answer;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
         {
             timer.Start();
-
-
+            MyTimer.stopwatch.Start();
         }
     }
 }

@@ -165,7 +165,8 @@
             // 
             // timer
             // 
-            this.timer.Enabled = true;
+            this.timer.Interval = 10;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // button10
             // 
@@ -176,7 +177,7 @@
             this.button10.TabIndex = 2;
             this.button10.Text = "&Start";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.startButton);
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Form1
             // 
